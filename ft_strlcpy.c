@@ -6,12 +6,11 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 14:02:58 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/24 19:01:52 by asanni           ###   ########.fr       */
+/*   Updated: 2023/07/26 22:05:24 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -35,6 +34,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (i);
 }
 
+// #include <stdio.h>
 // int	main(void)
 // {
 // 	const char	stringsrc[10] = "Sanni";

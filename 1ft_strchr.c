@@ -1,26 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   1ft_strchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/23 15:42:24 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/23 16:10:54 by asanni           ###   ########.fr       */
+/*   Created: 2023/07/24 19:23:35 by asanni            #+#    #+#             */
+/*   Updated: 2023/07/27 18:24:33 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
-{
-	if ((c >= 'A' && c <= 'Z'))
-	{
-		c += 32;
-	}
-	return (c);
-}
+#include "libft.h"
 
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	printf("%c", ft_tolower('B'));
-// }
+char	*ft_strchr(const char *s, int c);

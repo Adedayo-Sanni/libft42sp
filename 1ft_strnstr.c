@@ -1,26 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   1ft_strnstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/23 15:42:07 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/23 16:08:11 by asanni           ###   ########.fr       */
+/*   Created: 2023/07/27 18:02:02 by asanni            #+#    #+#             */
+/*   Updated: 2023/07/27 18:26:11 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
-{
-	if ((c >= 'a' && c <= 'z'))
-	{
-		c -= 32;
-	}
-	return (c);
-}
+#include "libft.h"
 
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	printf("%c", ft_toupper('W'));
-// }
+char	*strnstr(const char *big, const char *little, size_t len);
