@@ -1,36 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   1ft_strrchr.c                                      :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/24 19:24:43 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/28 19:26:58 by asanni           ###   ########.fr       */
+/*   Created: 2023/07/28 18:09:54 by asanni            #+#    #+#             */
+/*   Updated: 2023/07/28 19:14:39 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int ch)
-{	
-	int	i;
+char	*ft_strdup(const char *s)
+{
+	int		i;
+	char	*copy;
 
-	i = ft_strlen(s);
-	while (s[i - 1] != '\0' && ch != *s)
-		s--;
-	if (ch == *s)
-		return ((char *)s);
-	else
-		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		i++;
+	}
+	copy = malloc (i + 1 * sizeof (char));
+	if (*s == '\0')
+	{
+		copy[0] = '\0';
+		return (copy);
+	}
+	i = 0;
+	while (s[i])
+	{
+		copy[i] = s[i];
+		i++;
+	}
+	copy[i] = '\0';
+	return (copy);
 }
 
 // #include <stdio.h>
+
 // int	main(void)
 // {
-// 	int			c;
-// 	const char	nome[10] = "Adedayo";
+// 	char	*ptr;
 
-// 	c = 'e';
-// 	printf("%s", ft_strrchr(nome, c));
+// 	ptr = ft_strdup("Adedayo");
+// 	printf("%s\n", ptr);
+// 	free(ptr);
+// 	return (0);
 // }

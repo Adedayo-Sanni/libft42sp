@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 15:30:52 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/25 19:02:16 by asanni           ###   ########.fr       */
+/*   Updated: 2023/07/27 22:15:52 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-//sizet functions
+
+//Size_t functions
 size_t	ft_strlen(const char *c);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
+
 //
 int		ft_toupper(int c);
 int		ft_tolower(int c);
@@ -37,7 +39,7 @@ int		ft_strlcpy(char *dest, const char *src, size_t size);
 int		ft_memcmp(const void *str1, const void *str2, size_t num );
 int		ft_strncmp(const char *str1, const char *str2, size_t num);
 
-//
+//Functions that return pointers
 char	*ft_strdup(const char *src);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strchr(const char *str, int c);
