@@ -6,13 +6,23 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 18:01:10 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/28 21:15:23 by asanni           ###   ########.fr       */
+/*   Updated: 2023/07/28 21:44:47 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	
+	ft_memset((void *)s, '\0', (size_t) n);
 }
+
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	char c[] = "ddedayo";
+
+// 	ft_bzero(c, 1);
+// 	printf("%s", c);
+// }

@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 21:55:40 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/27 18:19:53 by asanni           ###   ########.fr       */
+/*   Updated: 2023/07/28 21:55:15 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,12 @@ int	ft_atoi(const char *nptr)
 // 	int	j;
 // 	int	k;
 
-// 	i = ft_atoi("	-3");
+// 	i = ft_atoi("	--3");
 // 	j = ft_atoi("43");
 // 	k = i + j;
+// 	printf("%d\n", i);
 // 	printf("%d", k);
 // 	return (0);
 // }
+
+checar o add++ no if no phyton tutor.
