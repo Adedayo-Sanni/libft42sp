@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 19:24:43 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/28 19:26:58 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/02 19:49:55 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ char	*ft_strrchr(const char *s, int ch)
 }
 
 // #include <stdio.h>
+
 // int	main(void)
 // {
 // 	int			c;

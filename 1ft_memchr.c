@@ -6,8 +6,10 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 18:01:27 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/27 18:01:29 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/02 19:48:23 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n);

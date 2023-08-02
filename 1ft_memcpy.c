@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 18:01:40 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/28 22:29:44 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/02 19:49:44 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 // int	main(void)
 // {
-// 	char	dest[] = "Adedayo";
+// 	char	dest[] = "Ade";
 // 	char	src[] = "Linda";
 
 // 	printf("Este é o destino: %s\n", dest);
