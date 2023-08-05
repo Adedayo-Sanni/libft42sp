@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   1ft_memcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 18:01:40 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/02 19:49:44 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/05 15:43:32 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // 	char	dest[] = "Ade";
 // 	char	src[] = "Linda";
 
-// 	printf("Este é o destino: %s\n", dest);
-// 	printf("Esta é a origem: %s\n", src);
+// 	printf("This is Destiny: %s\n", dest);
+// 	printf("This is Source: %s\n", src);
 // 	ft_memcpy(dest, src, 10);
-// 	printf("Está é a função modificada: %s", dest);
+// 	printf("This is the modified function: %s", dest);
 // }
