@@ -6,8 +6,10 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 18:01:34 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/27 18:01:35 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/02 20:38:54 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n);

@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 15:30:52 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/27 22:15:52 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/04 20:19:24 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stddef.h>
 
 // Mandatory part
 
@@ -35,7 +36,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *c);
 void	ft_bzero(void *str, size_t n);
-int		ft_strlcpy(char *dest, const char *src, size_t size);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 int		ft_memcmp(const void *str1, const void *str2, size_t num );
 int		ft_strncmp(const char *str1, const char *str2, size_t num);
 

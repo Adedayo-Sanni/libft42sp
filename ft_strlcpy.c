@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 14:02:58 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/26 22:05:24 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/04 20:27:01 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,18 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 }
 
 // #include <stdio.h>
+// #include <bsd/string.h>
+// #include <string.h>
+// #include <stdlib.h>
+
 // int	main(void)
 // {
 // 	const char	stringsrc[10] = "Sanni";
 // 	char		stringdst[7] = "Adedayo";
 // 	size_t		i;
 
-// 	printf("o tamanho da string é: %zu\n", ft_strlcpy(stringdst, stringsrc, i));
-// 	printf("a string copiada é: %s\n", stringdst);
-// 	printf("a string no source é: %s", stringsrc);
+// 	printf("My function é: %zu\n", ft_strlcpy(stringdst, stringsrc, i));
+// 	printf("Original function: %zu\n", strlcpy(stringdst, stringsrc, i));
+// 	printf("The copied string is: %s\n", stringdst);
+// 	printf("The sorce string is: %s", stringsrc);
 // }

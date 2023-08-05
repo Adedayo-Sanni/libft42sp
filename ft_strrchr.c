@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   1ft_strrchr.c                                      :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 19:24:43 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/02 19:49:55 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/04 17:23:50 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int ch)
-{	
-	int	i;
+char	*ft_strrchr(const char *s, int c)
+{
+	int			len;
+	const char	*string;
 
-	i = ft_strlen(s);
-	while (s[i - 1] != '\0' && ch != *s)
+	string = s;
+	len = ft_strlen(s);
+	s = (s + len);
+	while (*s != *string && c != *s)
 		s--;
-	if (ch == *s)
+	if (c == *s)
 		return ((char *)s);
-	else
-		return (NULL);
+	return (0);
 }
 
 // #include <stdio.h>
 
 // int	main(void)
 // {
-// 	int			c;
-// 	const char	nome[10] = "Adedayo";
-
-// 	c = 'e';
-// 	printf("%s", ft_strrchr(nome, c));
+// 	char	nome[10] = "Adedayo";
+// 	printf("%s", ft_strrchr(nome, 'a'));
+// 	return (0);
 // }
