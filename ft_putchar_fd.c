@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/24 19:00:56 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/06 15:31:57 by asanni           ###   ########.fr       */
+/*   Created: 2023/08/06 16:22:27 by asanni            #+#    #+#             */
+/*   Updated: 2023/08/06 16:39:36 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (s1[i] != '\0' && i < n)
-	{
-		if (!(s1[i] == s2[i]))
-		{
-			return (s1[i] - s2[i]);
-		}
-		i++;
-	}
-	if (i != n)
-	{
-		return (s1[i] - s2[i]);
-	}
-	return (0);
+	write(fd, &c, 1);
 }
-
-// #include <stdio.h>
 
 // int	main(void)
 // {
-// 	printf("%d", ft_strncmp("Hello", "Hello", 5));
+// 	char	c = 'M';
+// 	ft_putchar_fd(c, 1);
+// 	return (0);
 // }

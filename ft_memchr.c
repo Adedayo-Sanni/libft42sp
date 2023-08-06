@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 18:01:27 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/05 14:11:56 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/06 16:17:25 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*string;
 
 	string = (unsigned char *)s;
-	while (*string != '\0' && c != *string)
-	string++;
-	if (c == *string)
-		return (string);
-	else
-		return (NULL);
+	while (n--)
+	{
+		if (c == *string)
+			return (string);
+		string++;
+	}
+	return (NULL);
 }
 
 // #include <stdio.h>
@@ -31,12 +32,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // int	main(void)
 // {
 // 	char	c[] = "Onika";
-// 	char	*original = memchr(c, 'k', sizeof(c));
-// 	char	*myfunc = ft_memchr(c, 'k',sizeof(c));
+// 	char	*original = memchr(c, 'k', 5);
+// 	char	*myfunc = ft_memchr(c, 'k',5);
 
-// 	printf ("ORIGINAL FUNCTION:'c' found at position %ld.\n", original - c + 1);
 // 	printf ("ORIGINAL FUNCTION: search character found:  %s\n", original);
-// 	printf ("MY FUNCTION:'c' found at position %ld.\n", myfunc - c + 1);
 // 	printf ("MY FUNCTION: search character found:  %s\n", myfunc);
 // }
 

@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   1ft_substr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/27 18:01:40 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/06 15:29:37 by asanni           ###   ########.fr       */
+/*   Created: 2023/08/06 11:27:05 by asanni            #+#    #+#             */
+/*   Updated: 2023/08/06 13:07:17 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*p_src;
-	char	*p_dest;
+	char const	*sub_s;
+	size_t		i;
 
-	if (dest == src || !n)
-		return (dest);
-	p_src = (char *)src;
-	p_dest = (char *)dest;
-	while (n--)
-		*p_dest++ = *p_src++;
-	return (dest);
+	i = 0;
+	sub_s = (char *)malloc(len + 1);
+	if (!sub_s)
+		return (NULL);
+	while (*s)
+	{
+		
+	}
+	return(sub_s);
 }
 
 // #include <stdio.h>
 
 // int	main(void)
 // {
-// 	char	dest[] = "Ade";
-// 	char	src[] = "Linda";
+// 	char	c[] = "adedayo sanni";
 
-// 	printf("This is Destiny: %s\n", dest);
-// 	printf("This is Source: %s\n", src);
-// 	ft_memcpy(dest, src, 10);
-// 	printf("This is the modified function: %s", dest);
+// 	printf("A string copiada é: %s", ft_substr(c, 3, 7));
+// 	return (0);
 // }
