@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/27 18:01:40 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/07 22:05:01 by asanni           ###   ########.fr       */
+/*   Created: 2023/08/07 19:08:50 by asanni            #+#    #+#             */
+/*   Updated: 2023/08/07 19:26:13 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	char	*p_dest;
+	int	i;
 
-	if (dest == src || !n)
-		return (dest);
-	p_dest = (char *)dest;
-	while (n--)
-		*(char *)p_dest++ = *(char *)src++;
-	return (p_dest);
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+	i++;
+	}
 }
-
-// #include <stdio.h>
 
 // int	main(void)
 // {
-// 	char	dest[] = "Ade";
-// 	char	src[] = "Linda";
+// 	char	str[] = "Onika";
 
-// 	printf("This is Destiny: %s\n", dest);
-// 	printf("This is Source: %s\n", src);
-// 	ft_memcpy(dest, src, 10);
-// 	printf("This is the modified function: %s", dest);
+// 	ft_putstr_fd(str, 1);
+// 	return (0);
 // }

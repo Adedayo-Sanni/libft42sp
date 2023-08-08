@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 15:30:52 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/04 20:19:24 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/07 20:34:32 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		ft_memcmp(const void *str1, const void *str2, size_t num );
 int		ft_strncmp(const char *str1, const char *str2, size_t num);
 
 //Functions that return pointers
-char	*ft_strdup(const char *src);
+char	*ft_strdup(const char *s);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
