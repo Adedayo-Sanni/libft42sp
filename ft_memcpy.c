@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 18:01:40 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/07 22:05:01 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/08 20:53:15 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,34 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*p_dest;
+	char	*p_src;
+	size_t	i;
 
-	if (dest == src || !n)
-		return (dest);
+	if (!dest || !src)
+		return (NULL);
+	p_src = (char *)src;
 	p_dest = (char *)dest;
-	while (n--)
-		*(char *)p_dest++ = *(char *)src++;
-	return (p_dest);
+	i = 0;
+	while (i < n)
+	{
+		*(p_dest + i) = *(p_src + i);
+		i++;
+	}
+	return (dest);
 }
 
 // #include <stdio.h>
+// #include <string.h>
 
 // int	main(void)
 // {
-// 	char	dest[] = "Ade";
-// 	char	src[] = "Linda";
+// 	char	str1[] = "Geek";
+// 	char	str2[] = "Quiz";
 
-// 	printf("This is Destiny: %s\n", dest);
-// 	printf("This is Source: %s\n", src);
-// 	ft_memcpy(dest, src, 10);
-// 	printf("This is the modified function: %s", dest);
+// 	puts("Before");
+// 	puts(str1);
+// 	puts("after");
+// 	ft_memcpy(str1, str2, sizeof(str2));
+// 	puts(str1);
+// 	return (0);
 // }

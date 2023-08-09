@@ -14,15 +14,14 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*temp;
-
-	temp = dest;
-	while (src != '\0')
-	{
-		ft_memcpy(temp, src, ft_strlen(src));
-		n--;
-	}
-	return ((char *)dest);
+	if (!dest && !src)
+		return (NULL);
+	if (dest < src)
+		ft_memcpy(dest, src, n);
+	if (dest > src)
+		while (n--)
+			*(((char *)dest) + n) = *(((char *)src) + n);
+	return (dest);
 }
 
 // The memmove() function copies n bytes from memory area src to memory
@@ -32,12 +31,17 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // array to dest.
 
 // #include <stdio.h>
+// #include <string.h>
 
 // int	main(void)
 // {
-// 	char	dest[] = "Ade";
-// 	char	src[] = "Linda";
-// 	printf("This is Destiny: %s\n", dest);
-// 	printf("This is Source: %s\n", src);
-// 	printf("This is the modified function: %s", (char *)ft_memmove(dest, src, 10));
+// 	char	str1[] = "Geek";
+// 	char	str2[] = "Quiz";
+
+// 	puts("Before");
+// 	puts(str1);
+// 	puts("after");
+// 	ft_memmove(str1, str2, sizeof(str2));
+// 	puts(str1);
+// 	return (0);
 // }
