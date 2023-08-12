@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 20:21:30 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/26 22:05:55 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/09 20:31:28 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= 0 && c <= 9))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') \
+	|| (c >= 0 && c <= 9) || (c >= '0' && c <= '9'))
 		return (1);
 	else
 		return (0);
@@ -24,8 +25,6 @@ int	ft_isalnum(int c)
 
 // int	main (void)
 // {
-// 	char	str = 'a';
-// 	int	numb = 7;
-// 	printf("%d\n", ft_isalnum(str));
-// 	printf("%d", ft_isalnum(numb));
+// 	printf("%d\n", ft_isalnum('0'));
+// 	printf("%d", ft_isalnum('9'));
 // }

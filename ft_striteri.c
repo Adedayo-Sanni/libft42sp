@@ -1,48 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/27 18:01:40 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/09 20:54:49 by asanni           ###   ########.fr       */
+/*   Created: 2023/08/10 20:04:06 by asanni            #+#    #+#             */
+/*   Updated: 2023/08/10 21:05:45 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	*p_src;
-	char	*p_dest;
-	size_t	i;
+	unsigned int	i;
 
-	if (!dest && !src)
-		return (NULL);
-	p_src = (char *)src;
-	p_dest = (char *)dest;
 	i = 0;
-	while (i < n)
+	while (s[i] != '\0')
 	{
-		*(p_dest + i) = *(p_src + i);
+		f(i, (s + i));
 		i++;
 	}
-	return (dest);
 }
 
 // #include <stdio.h>
-// #include <string.h>
+// // Função que converte letras minúsculas em maiúsculas
+// void	*convert_to_uppercase(unsigned int i, char *chr)
+// {
+// 	if (*chr >= 'a' && *chr <= 'z')
+// 	{
+// 		*chr = *chr - 32;
+// 	}
+// }
 
 // int	main(void)
 // {
-// 	char	str1[] = "Geek";
-// 	char	str2[] = "Quiz";
-
-// 	puts("Before");
-// 	puts(str1);
-// 	puts("after");
-// 	ft_memcpy(str1, str2, sizeof(str2));
-// 	puts(str1);
+// 	char			str[] = "Hello, world!";
+// 	unsigned int	quant = ft_strlen(str);
+// 	ft_striteri(str, convert_to_uppercase);
+// 	printf("String após a conversão: %s\n", str);
 // 	return (0);
 // }

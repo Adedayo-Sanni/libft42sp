@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 14:02:58 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/04 20:27:01 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/09 20:03:06 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	i = 0;
 	if (size > 0)
 	{
-		while (i < (size -1) && src[i] != '\0')
+		while (i < (size - 1) && src[i] != '\0')
 		{
 			dst[i] = src[i];
 			i++;

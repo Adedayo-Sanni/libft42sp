@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 18:01:27 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/06 16:17:25 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/09 21:01:21 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	string = (unsigned char *)s;
 	while (n--)
 	{
-		if (c == *string)
+		if (*string == (unsigned char) c)
 			return (string);
 		string++;
 	}

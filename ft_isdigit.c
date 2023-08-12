@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 20:10:30 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/25 19:18:35 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/09 20:33:00 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);
@@ -23,7 +23,5 @@ int	ft_isdigit(int c)
 // #include <stdio.h>
 // int	main(void)
 // {
-// 	int	numb = 'a';
-
-// 	printf("%d", ft_isdigit(numb));
+// 	printf("%d", ft_isdigit('9'));
 // }

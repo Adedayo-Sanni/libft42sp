@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 19:38:05 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/06 11:20:26 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/11 21:37:30 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	overflow;
 
 	overflow = nmemb * size;
-	if (nmemb != '\0' && (overflow / nmemb) != size)
+	if (nmemb != 0 && (overflow / nmemb) != size)
 		return (NULL);
-	mem = malloc(1 * sizeof(nmemb));
+	mem = malloc(nmemb * size);
 	if (!mem)
 		return (NULL);
-	ft_memset((void *)mem, '\0', (size_t) size);
+	ft_bzero(mem, overflow);
 	return (mem);
 }
 
@@ -39,23 +39,23 @@ void	*ft_calloc(size_t nmemb, size_t size)
 // 1chr - 1byte, 1Int - 4bytes
 
 // #include <stdio.h>
-// // int	main(void)
-// // {
-// // 	size_t	num_elements = 5;
-// // 	size_t	element_size = sizeof(int);
-// // 	int		*array = (int *)ft_calloc(num_elements, element_size);
+// int	main(void)
+// {
+// 	size_t	num_elements = 2;
+// 	size_t	element_size = sizeof(int);
+// 	int		*array = (int *)ft_calloc(num_elements, element_size);
 
-// // 	if (array == NULL)
-// // 	{
-// // 		printf("Fail to alocate memory.\n");
-// // 		return (1);
-// // 	}
-// // 	printf("Alocated array an initialized with zeros\n");
-// // 	for (size_t i = 0; i < num_elements; i++)
-// // 	{
-// // 		printf("%d ", array[i]);
-// // 	}
-// // 	printf("\n");
-// // 	free(array);
-// // 	return (0);
-// // }
+// 	if (array == NULL)
+// 	{
+// 		printf("Fail to alocate memory.\n");
+// 		return (1);
+// 	}
+// 	printf("Alocated array and initialized with zeros\n");
+// 	for (size_t i = 0; i < num_elements; i++)
+// 	{
+// 		printf("%d ", array[i]);
+// 	}
+// 	printf("\n");
+// 	free(array);
+// 	return (0);
+// }

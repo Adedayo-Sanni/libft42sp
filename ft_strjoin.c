@@ -1,48 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/27 18:01:40 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/09 20:54:49 by asanni           ###   ########.fr       */
+/*   Created: 2023/08/10 17:07:43 by asanni            #+#    #+#             */
+/*   Updated: 2023/08/10 19:50:36 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*p_src;
-	char	*p_dest;
-	size_t	i;
+	char	*newstr;
+	int		i;
+	int		j;
 
-	if (!dest && !src)
-		return (NULL);
-	p_src = (char *)src;
-	p_dest = (char *)dest;
+	newstr = NULL;
 	i = 0;
-	while (i < n)
+	j = 0;
+	newstr = (char *)malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!s1 || !s2 || !newstr)
+		return (NULL);
+	while (s1[i] != '\0')
 	{
-		*(p_dest + i) = *(p_src + i);
+		newstr[i] = s1[i];
 		i++;
 	}
-	return (dest);
+	while (s2[j] != '\0')
+	{
+		newstr[i] = s2[j];
+		i++;
+		j++;
+	}
+	return (newstr);
 }
 
 // #include <stdio.h>
-// #include <string.h>
 
 // int	main(void)
 // {
-// 	char	str1[] = "Geek";
-// 	char	str2[] = "Quiz";
-
-// 	puts("Before");
-// 	puts(str1);
-// 	puts("after");
-// 	ft_memcpy(str1, str2, sizeof(str2));
-// 	puts(str1);
-// 	return (0);
+// 	char src[] = "sanni";
+// 	char dest[] = "adedayo";
+// 	printf("%s", ft_strjoin(src, dest));
 // }

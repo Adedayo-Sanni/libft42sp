@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 19:24:43 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/06 15:29:01 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/09 21:49:04 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ char	*ft_strrchr(const char *s, int c)
 	string = s;
 	len = ft_strlen(s);
 	s = (s + len);
-	while (*s != *string && c != *s)
+	while (*s != *string && (unsigned char)c != *s)
 		s--;
-	if (c == *s)
+	if ((unsigned char)c == *s)
 		return ((char *)s);
 	return (0);
 }
