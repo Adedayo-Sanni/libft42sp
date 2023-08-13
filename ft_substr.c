@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 11:27:05 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/12 07:46:58 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/13 17:49:30 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,34 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*sub_str;
+	char	*substr;
 	size_t	slen;
-	size_t	i;
 
-	if (!s)
-		return (NULL);
-	if (start > slen)
-		return (ft_strdup(""));
 	slen = ft_strlen(s);
-	sub_str = (char *)malloc(sizeof(char) * slen + 1);
-	if (sub_str)
-		ft_strlcpy(sub_str, s[start], slen + 1);
-	return (sub_str);
+	if (start >= slen)
+		return (ft_strdup(""));
+	substr = NULL;
+	if (len > (slen - start))
+		len = slen - start;
+	substr = (char *)malloc(sizeof(char) * len + 1);
+	if (!s || !substr)
+		return (NULL);
+	if (substr)
+		ft_strlcpy(substr, &s[start], len + 1);
+	substr[len] = '\0';
+	return (substr);
 }
 
 // #include <stdio.h>
 
 // int	main(void)
 // {
-// 	char	c[] = "adedayo sanni";
+// 	char	*string = ft_strdup("hello wolrd");
+// 	char	*cut = ft_substr(string, 0, 5);
 
-// 	printf("A string copiada é: %s", ft_substr(c, 3, 7));
+// 	printf("the substring is: %s", cut);
 // 	return (0);
 // }
+
+// if (len > (slen - start))
+// 		len = slen - start; esta função está vericando se eu não estou alocando um puta espaçõe de memória sem necessidade pois não vou escrever a função uma vez que o len passado é maior que o len da strng s então vai sobrar espaço.
