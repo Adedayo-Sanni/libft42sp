@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 15:42:07 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/06 15:27:38 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/20 12:31:04 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,3 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	printf("%c", ft_toupper('W'));
-// }

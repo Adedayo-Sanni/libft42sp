@@ -12,14 +12,15 @@
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+// void	ft_putchar_fd(char c, int fd)
+// {
+// 	write(fd, &c, 1);
+// }
+
+/*versão printf*/
+
+int	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
+	return (1);
 }
-
-// int	main(void)
-// {
-// 	char	c = 'M';
-// 	ft_putchar_fd(c, 1);
-// 	return (0);
-// }

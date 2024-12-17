@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 19:54:38 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/26 22:06:06 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/18 18:21:12 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-// #include <stdio.h>
-
-// int	main (void)
-// {
-// 	char str = '\n';
-// 	printf("%d", ft_isalpha(str));
-// }

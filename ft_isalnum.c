@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 20:21:30 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/09 20:31:28 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/18 18:21:02 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,9 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') \
-	|| (c >= 0 && c <= 9) || (c >= '0' && c <= '9'))
+	if ((c > 96 && c < 123) || (c > 64 && c < 91) \
+	|| (c > 47 && c < 58))
 		return (1);
 	else
 		return (0);
 }
-
-// #include <stdio.h>
-
-// int	main (void)
-// {
-// 	printf("%d\n", ft_isalnum('0'));
-// 	printf("%d", ft_isalnum('9'));
-// }

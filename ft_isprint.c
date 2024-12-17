@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 20:36:39 by asanni            #+#    #+#             */
-/*   Updated: 2023/07/26 22:06:20 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/18 18:21:42 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	int ascii = 98;
-// 	char ascii2 = 'a';
-
-// 	printf("%d\n", ft_isprint(ascii));
-// 	printf("%d", ft_isprint(ascii2));
-// }

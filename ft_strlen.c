@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 14:10:37 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/06 15:30:50 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/18 18:24:42 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	int	len = ft_strlen("hello");
-
-// 	printf("%d", len);
-// }

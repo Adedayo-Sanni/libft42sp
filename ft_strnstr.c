@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 18:02:02 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/04 19:37:53 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/18 18:25:28 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// #include <stdio.h>
-// int	main(void)
-// { 
-// 	int			c;
-// 	const char	nome_comp[] = "Onika Tania Maraj";
-// 	const char	nome[] = "Tania";
-
-// 	c = 18;
-// 	printf("%s", ft_strnstr(nome_comp, nome, c));
-// }

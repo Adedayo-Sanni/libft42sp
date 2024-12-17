@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 19:00:56 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/06 15:31:57 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/18 18:25:14 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (!(s1[i] == s2[i]))
 		{
-			return (s1[i] - s2[i]);
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		}
 		i++;
 	}
 	if (i != n)
 	{
-		return (s1[i] - s2[i]);
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("%d", ft_strncmp("Hello", "Hello", 5));
-// }

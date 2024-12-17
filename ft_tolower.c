@@ -6,7 +6,7 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 15:42:24 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/06 15:31:38 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/18 18:26:35 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,3 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
-
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	printf("%c", ft_tolower('B'));
-// }

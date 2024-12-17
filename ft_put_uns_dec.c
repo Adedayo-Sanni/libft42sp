@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_put_uns_dec.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/27 18:01:40 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/18 18:22:23 by asanni           ###   ########.fr       */
+/*   Created: 2023/09/16 14:55:39 by asanni            #+#    #+#             */
+/*   Updated: 2023/10/31 20:19:34 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_put_uns_dec(unsigned int n)
 {
-	char	*p_src;
-	char	*p_dest;
-	size_t	i;
+	int	i;
 
-	if (!dest && !src)
-		return (NULL);
-	p_src = (char *)src;
-	p_dest = (char *)dest;
 	i = 0;
-	while (i < n)
+	if (n < 10)
 	{
-		*(p_dest + i) = *(p_src + i);
-		i++;
+		i += ft_putchar_fd(n + 48, 1);
 	}
-	return (dest);
+	else
+	{
+		i += ft_put_uns_dec(n / 10);
+		i += ft_put_uns_dec(n % 10);
+	}
+	return (i);
 }

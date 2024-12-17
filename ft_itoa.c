@@ -6,13 +6,13 @@
 /*   By: asanni <asanni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 17:14:45 by asanni            #+#    #+#             */
-/*   Updated: 2023/08/11 21:18:59 by asanni           ###   ########.fr       */
+/*   Updated: 2023/08/19 12:21:56 by asanni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nlen(int n)
+static int	ft_nlen(int n)
 {
 	int	i;
 
@@ -56,10 +56,3 @@ char	*ft_itoa(int n)
 		transf[0] = '-';
 	return (transf);
 }
-
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	printf("The transformed int is : %s", ft_itoa(7878847));
-// 	return (0);
-// }
